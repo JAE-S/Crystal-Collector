@@ -1,0 +1,200 @@
+/**
+ * Bootstrap Portfolio Activity
+ **/
+
+/*
+  ========================================
+  Layout
+  ========================================
+*/
+
+* {
+    box-sizing: border-box;
+  }
+  *, *::after, *::before {
+    box-sizing: border-box;
+  }
+/*
+  ========================================
+  Header - Nav Bar
+  ========================================
+*/
+.container1 {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+header {
+  background-image: url("../images/background/micro_carbon.png");
+  padding: 20px 40px 20px 40px;
+  color: silver;
+  font-family:'Raleway', sans-serif;
+  border: 1px solid transparent;
+  z-index: 1;
+  box-shadow: 2px 4px 8px black;
+}
+
+
+nav a {
+  color: silver;
+  padding: .25rem 0;
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+
+nav a:hover {
+  color: grey;
+  text-decoration: none;
+  border-bottom: 2px solid grey;
+}
+
+h4 {
+  line-height: 40px;
+  font-size: 1.5rem;
+}
+
+/*
+  ========================================
+  Main
+  ========================================
+*/
+body {
+  display: flex;
+  margin: 0 auto;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.background {
+  background-image: url("../images/background/micro_carbon.png");
+  z-index: 0;
+  background-repeat: repeat;
+  flex-grow: 1;
+  width: 100%;
+  padding: 40px; 
+}
+
+.container2 {
+  max-width: 960px;
+  z-index: 1;
+  background: silver;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 20px 40px 10px 40px;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+.pageHeading {
+  background: silver;
+  border-bottom: 3px solid grey;
+  line-height: 40px;
+}
+
+#sectionHeading {
+  text-align: left;
+  color: grey;
+  font-weight: bold;
+  padding-bottom: 10px;
+  padding-left: 0;
+  margin-left: 0;
+}
+  
+  .containerBody {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/*
+  ========================================
+  footer
+  ========================================
+*/
+
+footer {
+  background-image: url("../images/background/micro_carbon.png");
+  color: grey;
+  border: 1px solid transparent;
+  z-index: 1;
+  box-shadow: 10px -8px 10px -6px black;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+/*
+  ========================================
+  Typography
+  ========================================
+*/
+h1 {
+  font-size: 2rem;
+  text-decoration: none;
+  text-align: left;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  margin: 15px 20px 15px 20px; 
+}
+
+h2 {
+  font-size: 2rem;
+  text-decoration: none;
+  color: grey;
+  text-align: left;
+  font-family: 'Georgia', Times, 'Times New Roman', Times, serif;
+  margin-right: 1.5rem;
+}
+
+p {
+  font-family: 'Raleway', sans-serif;
+  color: #777777;
+}
+
+ /*
+  ========================================
+  Index Page Style Guide
+  ========================================
+*/
+
+#profileImage {
+  margin-right: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.containerBody p {
+  text-align: justify;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+#titleTag {
+  border-left: 3px solid grey;
+  padding-right: 40px;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 740px) {
+  .containerBody p {
+    font-size: 1rem;
+  }
+}
+
+ /*
+  ========================================
+  Media Screens
+  ========================================
+*/
+/* /* .crystals {
+    position: relative; 
+    display: inline-block;
+    overflow: none;
+} */
+
+.crystal {
+    width: 200px;
+    height: auto;
+
+} 
+
