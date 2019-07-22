@@ -1,10 +1,6 @@
-/**
- * Bootstrap Portfolio Activity
- **/
-
 /*
   ========================================
-  Layout
+  Crystal Game
   ========================================
 */
 
@@ -185,16 +181,9 @@ p {
   ========================================
   Media Screens
   ========================================
-*/
-/* /* .crystals {
-    position: relative; 
-    display: inline-block;
-    overflow: none;
-} */
+
 
 .crystal {
     width: 200px;
     height: auto;
-
-} 
-
+}

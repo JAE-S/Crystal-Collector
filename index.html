@@ -48,12 +48,12 @@
                     <p>Press the button below to begin.</p>
                     <p>Good Luck</p>
                      <!-- Play Game -->
-                    <button>Play</button>
+                    <button id="playButton">Play</button>
                 </div>
 
             </section>
              <!-- Active Game Section -->
-            <section class="activGame">
+            <section id="activeGame">
                 <div class="container2">
                      <!-- Title section -->
                     <div class="row d-flex flex-column flex-md-row">
@@ -72,20 +72,20 @@
                     <div class="row align-items-center">
                         <!-- <div class="min-vw-100"> -->
                         <!-- 1st Crystal -->
-                        <div class="col-lg-3 col-md-3 col-xs-3">
-                            <img class="img-fluid crystal"  id="1stCrystal" src="http://placehold.it/200x200" max-width="100%" alt="Crystal 1">
+                        <div class="col-lg col-sm col-md" style="max-width: 25%">
+                            <img class="img-fluid crystal"  id="1stCrystal" src="assets/images/crystal.png" alt="Crystal 1">
                         </div>
                         <!-- 2nd Crystal -->
-                        <div class="col-lg-3 col-md-3 col-xs-3">
-                            <img class="img-fluid crystal"  id="2ndtCrystal" src="http://placehold.it/200x200" max-width="100%" alt="Crystal 2">
+                        <div class="col-lg col-sm col-md" style="max-width: 25%">
+                            <img class="img-fluid crystal"  id="2ndtCrystal" src="assets/images/crystal2.png" alt="Crystal 2">
                         </div>
                         <!-- 3rd Crystal -->
-                        <div class="col-lg-3 col-md-3 col-xs-3">
-                            <img class="img-fluid crystal"  id="3rdCrystal" src="http://placehold.it/200x200" max-width="100%" alt="Crystal 3">
+                        <div class="col-lg col-sm col-md" style="max-width: 25%">
+                            <img class="img-fluid crystal"  id="3rdCrystal" src="assets/images/crystal3.png" alt="Crystal 3">
                         </div>
                         <!-- 4th Crystal -->
-                        <div class="col-lg-3 col-md-3 col-xs-3">
-                            <img class="img-fluid crystal"   id="4thCrystal" src="http://placehold.it/200x200" max-width="100%" alt="Crystal 4">
+                        <div class="col-lg col-sm col-md" style="max-width: 25%">
+                            <img class="img-fluid crystal"   id="4thCrystal" src="http://placehold.it/200x200" alt="Crystal 4">
                         <!-- </div> -->
                         </div>
                     </div>
@@ -96,7 +96,7 @@
                             <div class="col-">
                                 <!-- Random Number -->
                                 <h2>Magic Number</h2>
-                                <p><span id="magicNumber"></span></p>
+                                <p><span id="number-to-guess"></span></p>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-xs-6">
@@ -107,9 +107,9 @@
                             </div>
                         </div>
                     </div>
-                <!-- Restart function -->
+                    <!-- Restart function -->
                     <div>
-
+                    <button id="restart">Play Again!</button>
                     </div>
                 </div>
             </section>
