@@ -68,9 +68,41 @@ function existingNumber() {
   }
   return false;
 }
-console.log(randCrystalNumber);
+console.log(randCrystalNumber.length);
 
+// Loop that creates 4 images for each random number 
+for (var i = 0; i < randCrystalNumber.length; i++) {
 
+  // Each itteration will have its own image crystal 
+  // var imageCrystal = $("#crystals");
+
+  $("#crystal_1").attr("data-crystalvalue", randCrystalNumber[0]);
+  $("#crystal_2").attr("data-crystalvalue", randCrystalNumber[1]);
+  $("#crystal_3").attr("data-crystalvalue", randCrystalNumber[2]);
+  $("#crystal_4").attr("data-crystalvalue", randCrystalNumber[3]);
+}
+   $(".crystal").on("click", function() {
+
+   var crystalValue = ($(this).attr("data-crystalvalue"));
+   crystalValue = parseInt(crystalValue);
+   // We then add the crystalValue to the user's "counter" which is a global variable.
+   // Every click, from every crystal adds to the global counter.
+   counter += crystalValue;
+ 
+  //  All of the same game win-lose logic applies. So the rest remains unchanged.
+   alert("New score: " + counter);
+
+   if (counter === magicNumber) {
+     alert("You win!");
+   }
+
+   else if (counter >= magicNumber) {
+     alert("You lose!!");
+   }
+  });
+  // Each crystal will be aassigned the class ".crystal-image"
+
+// }
 
  /*
   ========================================
