@@ -11,6 +11,7 @@
 
         <!-- External Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Cinzel|Raleway:100&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Fondamento|Karla&display=swap" rel="stylesheet">
 
         <!-- CSS Stylesheets -->
         <link rel="stylesheet" href="assets/css/reset.css">
@@ -34,8 +35,8 @@
         <!-- Middle Section -->
         <main class="background"> 
              <!-- Intro Page -->
-            <section class="container2">
-                <div id="instructions">
+            <section id="instructions">
+                <div class="container2">
                     <h1>How To Play The Game</h1>
                     <ol>
                         <li>When the game begins, you will be given a magic number.</li>
@@ -56,55 +57,54 @@
             <section id="activeGame">
                 <div class="container2">
                      <!-- Title section -->
-                    <div class="row d-flex flex-column flex-md-row">
-                        <div class="col-lg-9 col-xs-9">
+                    <div class="row d-flex flex-md-row align-items-center">
+                        <div class="col-lg-9 col-xs-9" style="max-width: 70%">
                             <h1>CRYSTAL COLLECTOR</h1>
-                            <p>Match the magic number by clicking the crystals</p>
                         </div>
                          <!-- Wins & Losses Counter -->
-                        <div class="col-lg-3 col-xs-3">
+                        <div class="col-lg-3 col-xs-3 text-right" style="max-width: 30%">
                             <p><span id="wins"></span></p>
                             <p><span id="losses"></span></p>
                         </div>
+                        <span id="instructions2">Match the magic number by clicking the crystals to reveal their values!</span>
                     </div>
+        
+                
                     
                     <!-- Crystals -->
-                    <div class="row align-items-center">
-                        <!-- <div class="min-vw-100"> -->
+                    <div class="row align-items-center crystalsRow">
                         <!-- 1st Crystal -->
                         <div class="col-lg col-sm col-md" style="max-width: 25%">
-                            <img class="img-fluid crystal"  id="crystal_1" src="assets/images/crystal.png" alt="Crystal 1">
+                            <img class="img-fluid crystal"  id="crystal_1" src="assets/images/crystal_5.png" alt="Crystal 1">
                         </div>
                         <!-- 2nd Crystal -->
                         <div class="col-lg col-sm col-md" style="max-width: 25%">
-                            <img class="img-fluid crystal"  id="crystal_2" src="assets/images/crystal2.png" alt="Crystal 2">
+                            <img class="img-fluid crystal"  id="crystal_2" src="assets/images/crystal_2.png" alt="Crystal 2">
                         </div>
                         <!-- 3rd Crystal -->
                         <div class="col-lg col-sm col-md" style="max-width: 25%">
-                            <img class="img-fluid crystal"  id="crystal_3" src="assets/images/crystal3.png" alt="Crystal 3">
+                            <img class="img-fluid crystal"  id="crystal_3" src="assets/images/crystal_3.png" alt="Crystal 3">
                         </div>
                         <!-- 4th Crystal -->
                         <div class="col-lg col-sm col-md" style="max-width: 25%">
-                            <img class="img-fluid crystal"   id="crystal_4" src="http://placehold.it/200x200" alt="Crystal 4">
+                            <img class="img-fluid crystal"   id="crystal_4" src="assets/images/crystal_4.png" alt="Crystal 4">
                         <!-- </div> -->
                         </div>
                     </div>
 
                     <!-- Computer & User Number Tracker -->
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-xs-6">
-                            <div class="col-">
+                    <div class="row text-center winsLossesRow">
+                        <div class="col-lg-6 col-md-6 col-xs-6" style="max-width: 50%">
                                 <!-- Random Number -->
-                                <h2>Magic Number</h2>
-                                <p><span id="number-to-guess"></span></p>
-                            </div>
+                                <h2 class="text-center">Magic Number</h2>
+                                <h2><span id="number-to-guess"></span></h2>
+                            <!-- </div> -->
                         </div>
-                        <div class="col-lg-6 col-md-6 col-xs-6">
-                            <div class="col-">
+                        <div class="col-lg-6 col-md-6 col-xs-6" style="max-width: 50%">
                                 <!-- User's guesses -->
-                                <h2>You're total</h2>
-                                <p><span id="userTotal"></span></p>
-                            </div>
+                                <h2 class="text-center">You're total</h2>
+                                <h2><span id="userTotal"></span></h2>
+                            <!-- </div> -->
                         </div>
                     </div>
                     <!-- Restart function -->

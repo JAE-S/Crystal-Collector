@@ -25,7 +25,6 @@ header {
   padding: 20px 40px 20px 40px;
   color: silver;
   font-family:'Raleway', sans-serif;
-  border: 1px solid transparent;
   z-index: 1;
   box-shadow: 2px 4px 8px black;
 }
@@ -46,6 +45,7 @@ nav a:hover {
 
 h4 {
   line-height: 40px;
+  font-family: 'Raleway', sans-serif;
   font-size: 1.5rem;
 }
 
@@ -136,8 +136,8 @@ h2 {
   font-size: 2rem;
   text-decoration: none;
   color: grey;
-  text-align: left;
-  font-family: 'Georgia', Times, 'Times New Roman', Times, serif;
+  line-height: 1.5; 
+  font-family: 'Fondamento', cursive;
   margin-right: 1.5rem;
 }
 
@@ -146,44 +146,36 @@ p {
   color: #777777;
 }
 
- /*
-  ========================================
-  Index Page Style Guide
-  ========================================
-*/
-
-#profileImage {
-  margin-right: 1.5rem;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+#instructions h1, #activeGame h1 {
+  font-family: 'Fondamento', cursive;
 }
 
-.containerBody p {
-  text-align: justify;
-  font-size: 1.2rem;
-  line-height: 1.5;
+#instructions2 {
+  font-family: 'Fondamento', cursive;
+  display: table;
+  margin: 0 auto;
+  color: grey; 
+  font-size: 1rem;
+  line-height: 1.5; 
 }
 
-#titleTag {
-  border-left: 3px solid grey;
-  padding-right: 40px;
-  margin-left: 1rem;
-  margin-bottom: 1rem;
-}
+/*
+========================================
+Media Screens
+========================================
+ */
+  /* @media only screen and (max-width: 740px) {
+    .containerBody p {
+      font-size: 1rem;
+    }
+  } */
 
-@media only screen and (max-width: 740px) {
-  .containerBody p {
-    font-size: 1rem;
+  .row {
+    padding-bottom: 30px; 
+  
   }
-}
 
- /*
-  ========================================
-  Media Screens
-  ========================================
-
-
-.crystal {
-    width: 200px;
+  /* #crystal_1 {
+    width: 95%;
     height: auto;
-}
+  } */
