@@ -18,6 +18,7 @@
         <link rel="stylesheet" href="assets/css/style.css">
     </head>
     <body> 
+
         <!-- Nav Bar -->
         <header class="align-items-center">
             <div class="container1">
@@ -32,17 +33,41 @@
             </div>           
         </header> 
 
+        <!-- Trigger Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  ...
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" id="restart" class="btn btn-primary" data-dismiss="modal">Play Again!</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
         <!-- Middle Section -->
         <main class="background"> 
-             <!-- Intro Page -->
-            
+
+            <!-- Intro Page -->
             <section id="instructions">
-                    <video autoplay muted loop id="myVideo">
-                            <source src="assets/images/background/crystals.mp4" type="video/mp4"  alt="Your browser does not support HTML5 video." preload>
-                        </video>
+                <!-- Background Video -->
+                <video autoplay muted loop id="myVideo">
+                    <source src="assets/images/background/crystals.mp4" type="video/mp4"  alt="Your browser does not support HTML5 video." preload>
+                </video>
+
                 <div class="containerIntro">
                     <h1>CRYSTAL COLLECTOR</h1>
                 <div class="text-center">
+
                     <p>How To Play The Game</p>
                     <ol>
                         <li>When the game begins, you will be given a magic number.</li>
@@ -55,23 +80,28 @@
                     <p>Press the button below to begin.</p>
                     <p>Good Luck</p>
                 </div>
-                     <!-- Play Game -->
+
+                <!-- Play Game -->
                 <div class="row texxt-center">
                     <button id="playButton">Play</button>
                 </div>
 
             </section>
-             <!-- Active Game Section -->
+
+            <!-- Active Game Section -->
             <section id="activeGame">
-                    <video autoplay muted loop id="myVideo">
-                            <source src="assets/images/background/active_game_background.mp4" style="width: 25%" type="video/mp4"  alt="Your browser does not support HTML5 video." preload>
-                        </video>
+                <!-- Background Video -->
+                <video autoplay muted loop id="myVideo">
+                    <source src="assets/images/background/active_game_background.mp4" style="width: 25%" type="video/mp4"  alt="Your browser does not support HTML5 video." preload>
+                </video>
+
                 <div class="container2">
                      <!-- Title section -->
                     <div class="row d-flex flex-md-row align-items-center">
                         <div class="col-lg-9 col-xs-9" style="max-width: 70%">
                             <h1>CRYSTAL COLLECTOR</h1>
                         </div>
+
                          <!-- Wins & Losses Counter -->
                         <div class="col-lg-3 col-xs-3 text-right" style="max-width: 30%">
                             <p><span id="wins"></span></p>
@@ -79,8 +109,6 @@
                         </div>
                         <span id="instructions2">Match the magic number by clicking the crystals to reveal their values!</span>
                     </div>
-        
-                
                     
                     <!-- Crystals -->
                     <div class="row align-items-center crystalsRow">
@@ -115,33 +143,11 @@
                                 <!-- User's guesses -->
                                 <h2 class="text-center">You're total</h2>
                                 <h2><span id="userTotal"></span></h2>
-                            <!-- </div> -->
                         </div>
-                    </div>
-                    <!-- Restart function -->
-                    <div>
-                    <button id="restart">Play Again!</button>
-                    <!-- Modal -->
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              ...
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          </div>
-        </div>
+                        <!-- <button type="button" id="restart" class="btn btn-primary">Play Again!</button> -->
                     </div>
                 </div>
+               
             </section>
         </main>
 
@@ -151,8 +157,8 @@
 
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <script src="assets/javascript/game.js" type="text/javascript"></script>
     </body>
 </html>

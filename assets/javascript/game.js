@@ -55,6 +55,7 @@ START GAME - FROM INTRO PAGE
     generateRandom();                          // Calls the generateRandom function to begin the game 
     $('#wins').text('WINS: ' + wins);          // Adds 'Wins: ' to HTML Doc 
     $('#losses').text('LOSSES: ' + losses);    // Adds 'losses: ' to HTML Doc 
+    $('#myModal').modal('hide');               // Togglts modal 
   });
 
   /*
@@ -71,6 +72,7 @@ START GAME - FROM INTRO PAGE
     generateRandom();                         // Calls the generateRandom function to begin the game 
     $('#wins').text('WINS: ' + wins);         // Adds 'Wins: ' to HTML Doc 
     $('#losses').text('LOSSES: ' + losses);   // Adds 'losses: ' to HTML Doc 
+    $('#myModal').modal('hides');             // Togglts modal 
   });
 
   /*
@@ -133,6 +135,7 @@ START GAME - FROM INTRO PAGE
       $('#restart').show();                 // Shows the restart button 
       $('.crystal').off('click');           // Disables click function of crystals until New game is run 
       gameOver = true;
+      $('#myModal').modal('show');          // Togglts modal 
     }
     // records wins
     else if (counter >= magicNumber) {
@@ -141,6 +144,7 @@ START GAME - FROM INTRO PAGE
       $('#restart').show();                   // Shows the restart button 
       $('.crystal').off('click');            // Disables click function of crystals until New game is run 
       gameOver = true;
+      $('#myModal').modal('show');          // Togglts modal 
     }
   });
   }
