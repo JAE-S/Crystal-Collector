@@ -21,10 +21,11 @@
 }
 
 header {
-  background-image: url("../images/background/micro_carbon.png");
+  background: black;
   padding: 20px 40px 20px 40px;
   color: silver;
   font-family:'Raleway', sans-serif;
+  border: 1px solid transparent;
   z-index: 1;
   box-shadow: 2px 4px 8px black;
 }
@@ -62,18 +63,30 @@ body {
 }
 
 .background {
-  background-image: url("../images/background/micro_carbon.png");
   z-index: 0;
-  background-repeat: repeat;
   flex-grow: 1;
   width: 100%;
   padding: 40px; 
 }
 
+.containerIntro {
+  max-width: 960px;
+  background: black;
+  opacity: .9;
+  z-index: 2;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 40px 40px 40px 40px;
+  margin: 0 auto;
+  overflow: auto;
+  margin-bottom: 40px;
+}
+
+
 .container2 {
   max-width: 960px;
   z-index: 1;
-  background: silver;
+  background: black;
+  background-repeat: repeat;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 20px 40px 10px 40px;
   margin: 0 auto;
@@ -109,13 +122,17 @@ body {
 */
 
 footer {
-  background-image: url("../images/background/micro_carbon.png");
+  background: black;
   color: grey;
   border: 1px solid transparent;
   z-index: 1;
   box-shadow: 10px -8px 10px -6px black;
   padding-top: 30px;
   padding-bottom: 10px;
+  font-family: 'Raleway', sans-serif;
+  position: fixed;
+  bottom: 0;
+  width: 100%; 
 }
 
 /*
@@ -144,6 +161,11 @@ h2 {
 p {
   font-family: 'Raleway', sans-serif;
   color: #777777;
+}
+.containerIntro h1 {
+  display: table;
+  margin: 0 auto;
+  color: silver;
 }
 
 #instructions h1, #activeGame h1 {
@@ -179,3 +201,11 @@ Media Screens
     width: 95%;
     height: auto;
   } */
+
+  #myVideo {
+    position: fixed;
+    z-index: -1;
+    right: 0;
+    top: 0;
+    flex-grow: 1;
+  }

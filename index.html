@@ -35,9 +35,15 @@
         <!-- Middle Section -->
         <main class="background"> 
              <!-- Intro Page -->
+            
             <section id="instructions">
-                <div class="container2">
-                    <h1>How To Play The Game</h1>
+                    <video autoplay muted loop id="myVideo">
+                            <source src="assets/images/background/crystals.mp4" type="video/mp4"  alt="Your browser does not support HTML5 video." preload>
+                        </video>
+                <div class="containerIntro">
+                    <h1>CRYSTAL COLLECTOR</h1>
+                <div class="text-center">
+                    <p>How To Play The Game</p>
                     <ol>
                         <li>When the game begins, you will be given a magic number.</li>
                         <li>You will also recieve four crystals, each with its own hidden value. </li>
@@ -48,13 +54,18 @@
 
                     <p>Press the button below to begin.</p>
                     <p>Good Luck</p>
+                </div>
                      <!-- Play Game -->
+                <div class="row texxt-center">
                     <button id="playButton">Play</button>
                 </div>
 
             </section>
              <!-- Active Game Section -->
             <section id="activeGame">
+                    <video autoplay muted loop id="myVideo">
+                            <source src="assets/images/background/active_game_background.mp4" style="width: 25%" type="video/mp4"  alt="Your browser does not support HTML5 video." preload>
+                        </video>
                 <div class="container2">
                      <!-- Title section -->
                     <div class="row d-flex flex-md-row align-items-center">
@@ -75,7 +86,7 @@
                     <div class="row align-items-center crystalsRow">
                         <!-- 1st Crystal -->
                         <div class="col-lg col-sm col-md" style="max-width: 25%">
-                            <img class="img-fluid crystal"  id="crystal_1" src="assets/images/crystal_5.png" alt="Crystal 1">
+                            <img class="img-fluid crystal"  id="crystal_1" src="assets/images/crystal_1.png" alt="Crystal 1">
                         </div>
                         <!-- 2nd Crystal -->
                         <div class="col-lg col-sm col-md" style="max-width: 25%">
@@ -110,6 +121,25 @@
                     <!-- Restart function -->
                     <div>
                     <button id="restart">Play Again!</button>
+                    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
                     </div>
                 </div>
             </section>
