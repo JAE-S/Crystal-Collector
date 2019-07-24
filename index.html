@@ -44,8 +44,19 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  ...
-                </div>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6 ml-auto" style="max-width: 50%">
+                                <video autoplay muted loop id="wonGameImage">
+                                    <source src="assets/images/crystals_winner_gif_2.mp4" type="video/mp4" alt="YOU WON!">
+                                </video>
+                                <img id="lostGameImage" src="assets/images/game_over.png" alt="GAME OVER!">
+                            </div>
+                            <div class="col-md-6 ml-auto">
+                                <span id="gameOvertext"></span>
+                            </div>
+                        </div>
+                    </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                   <button type="button" id="restart" class="btn btn-primary" data-dismiss="modal">Play Again!</button>
@@ -53,6 +64,7 @@
               </div>
             </div>
           </div>
+        </div>
 
         <!-- Middle Section -->
         <main class="background"> 

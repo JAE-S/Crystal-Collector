@@ -209,3 +209,17 @@ Media Screens
     top: 0;
     flex-grow: 1;
   }
+
+  #gameOverImage {
+
+    /* Positioning */
+     margin: 0 auto;
+
+    /* Box-model */
+   max-width: 100%;
+   height: auto; 
+
+    /* Typography */
+    text-align: center;
+
+  }
