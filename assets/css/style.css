@@ -10,7 +10,7 @@ Crystal Game
   *, *::after, *::before {
     box-sizing: border-box;
   }
-
+ 
 /*
 ========================================
 Header - Nav Bar
@@ -308,4 +308,125 @@ footer {
   position: fixed;
   width: 100%; 
   z-index: 1;
+}
+
+/*
+========================================
+Media Screens
+========================================
+*/
+
+@media screen and (min-width: 789px) {
+
+  .containerIntro {
+    max-width: 960px;
+    overflow: auto;
+    padding: 40px 40px 20px 40px;
+  }
+    
+  .container2 {
+    max-width: 960px;
+    overflow: auto;
+    padding: 20px 40px 10px 40px;
+  }
+        
+  h1 { /* PORTFOLIO SITE STYLES */
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: left;
+    text-decoration: none;
+  }
+
+  p {  /* PORTFOLIO SITE STYLES */
+    color: #777777;
+    font-family: 'Raleway', sans-serif;  
+  }
+
+  h2 {
+    font-size: 2rem;
+    line-height: 1.5; 
+  }
+
+  .containerIntro p {
+    font-size: 18px;
+    line-height: 1.5; 
+  }
+
+  .wins_losses p {
+    font-size: 24px; 
+    text-align: right;
+  }
+
+  #number-to-guess, #userTotal p {
+    font-size: 24px; 
+    line-height: 1.5; 
+  }
+
+  #instructions h1, #activeGame h1 {
+    font-size: 24px; 
+  }
+
+  #instructions2 {
+    font-size: 20px; 
+    line-height: 1.5; 
+    padding-top: 20px;  
+  }
+}
+
+@media screen and (max-width: 788px) {
+
+  .containerIntro {
+    max-width: 960px;
+    overflow: auto;
+    padding: 20px 10px 20px 10px;
+  }
+    
+  .container2 {
+    line-height: 1.5;
+    max-width: 960px;
+    overflow: auto;
+    padding: 20px 10px 20px 10px;
+  }
+
+  h1 { /* PORTFOLIO SITE STYLES */
+    font-size: 3vw;
+    font-weight: bold;
+    text-align: left;
+    text-decoration: none;
+  }
+  
+  p {  /* PORTFOLIO SITE STYLES */
+    color: #777777;
+    font-family: 'Raleway', sans-serif; 
+    font-size: 2vw;
+  }
+  
+  h2 {
+    font-size: 4vw;
+    line-height: 1.5; 
+  }
+  
+  .containerIntro p {
+    font-size: 3vw;
+    line-height: 1.5; 
+  }
+  
+  .wins_losses p {
+    font-size: 3vw;
+    line-height: 2;
+    text-align: right;
+  }
+  
+  #number-to-guess, #userTotal p {
+    font-size: 5vw; 
+    line-height: 1.5; 
+  }
+  
+  #instructions h1, #activeGame h1 {
+    font-size: 5vw; 
+  }
+  
+  .instructionsSmall {
+    display: none;
+  }
 }
