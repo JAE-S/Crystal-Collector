@@ -39,6 +39,10 @@ var counter = 0;            // Adds each crystal's value
 MEDIA
 ========================================
 */
+const soundClick = new Audio("./assets/sound_effects/crystal_click.mp3");
+const buttonClick = new Audio("./assets/sound_effects/button_click.mp3");
+const soundLost = new Audio("./assets/sound_effects/lost_game.mp3");
+const soundWon = new Audio("./assets/sound_effects/won_game.mp3");
 
 $(document).ready(function(){
 /*
@@ -49,6 +53,7 @@ START GAME - FROM INTRO PAGE
   $("#activeGame").hide();                  // Hides active game while instructions are shown
   
   $("#playButton").on('click', function() { 
+    buttonClick.play();  
     $("#instructions").hide();          // Hides instructions section when the play button is clicked 
     $('#restart').hide();               // Hides the restart button 
     $("#activeGame").show();            // Shows the active game elements 
@@ -64,6 +69,7 @@ START GAME - FROM INTRO PAGE
   ========================================
   */
   $("#restart").on('click', function() { 
+    buttonClick.play();   
     $('#restart').hide();                     // Hides instructions section when the play button is clicked 
     counter = 0;                              // Sets the counter back to '0'
     $('#userTotal').text(counter);            // Updates HTML doc with the reset counter value
@@ -118,6 +124,7 @@ START GAME - FROM INTRO PAGE
     }
     
     $(".crystal").on("click", function() {
+    soundClick.play();
 
     var crystalValue = ($(this).attr("data-crystalvalue"));           // Adds the crystalValue to the user's "counter"
     crystalValue = parseInt(crystalValue);
@@ -133,6 +140,7 @@ START GAME - FROM INTRO PAGE
     // records losses
     if (counter === magicNumber) {           
       wins++;                               // Increments wins 
+      soundWon.play();                          
       $('#wins').text('WINS: ' + wins);
       $('#restart').show();                 // Shows the restart button 
       $('.crystal').off('click');           // Disables click function of crystals until New game is run 
@@ -145,6 +153,7 @@ START GAME - FROM INTRO PAGE
     // records wins
     else if (counter >= magicNumber) {
       losses++;                                // Increments losses
+      soundLost.play();  
       $('#losses').text('LOSSES: ' + losses);
       $('#restart').show();                   // Shows the restart button 
       $('.crystal').off('click');            // Disables click function of crystals until New game is run 

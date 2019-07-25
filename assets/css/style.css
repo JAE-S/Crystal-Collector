@@ -1,7 +1,7 @@
 /*
-  ========================================
-  Crystal Game
-  ========================================
+========================================
+Crystal Game
+========================================
 */
 
 * {
@@ -10,174 +10,146 @@
   *, *::after, *::before {
     box-sizing: border-box;
   }
+
 /*
-  ========================================
-  Header - Nav Bar
-  ========================================
+========================================
+Header - Nav Bar
+========================================
 */
+
 .container1 {
-  max-width: 960px;
   margin: 0 auto;
+  max-width: 960px;
 }
 
 header {
   background: black;
-  padding: 20px 40px 20px 40px;
+  border: 1px solid transparent;
+  box-shadow: 2px 4px 8px black;
   color: silver;
   font-family:'Raleway', sans-serif;
-  border: 1px solid transparent;
+  padding: 20px 40px 20px 40px;
   z-index: 1;
-  box-shadow: 2px 4px 8px black;
 }
-
 
 nav a {
   color: silver;
-  padding: .25rem 0;
   font-size: 1rem;
   margin-left: 1rem;
+  padding: .25rem 0;
 }
 
 nav a:hover {
   color: grey;
-  text-decoration: none;
   border-bottom: 2px solid grey;
+  text-decoration: none;
 }
 
 h4 {
-  line-height: 40px;
   font-family: 'Raleway', sans-serif;
   font-size: 1.5rem;
+  line-height: 40px;
 }
 
 /*
-  ========================================
-  Main
-  ========================================
+========================================
+Main
+========================================
 */
+
 body {
   display: flex;
+  flex-direction: column;
   margin: 0 auto;
   min-height: 100vh;
-  flex-direction: column;
 }
 
 .background {
-  z-index: 0;
   flex-grow: 1;
-  width: 100%;
   padding: 40px; 
+  width: 100%;
+  z-index: 0;
 }
 
 .containerIntro {
-  max-width: 960px;
   background: black;
-  opacity: .9;
-  z-index: 2;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  padding: 40px 40px 20px 40px;
   margin: 0 auto;
-  overflow: auto;
   margin-bottom: 40px;
+  max-width: 960px;
+  opacity: .9;
+  overflow: auto;
+  padding: 40px 40px 20px 40px;
+  z-index: 2;
 }
 
 .container2 {
-  max-width: 960px;
-  z-index: 1;
   background: black;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  padding: 20px 40px 10px 40px;
   margin: 0 auto;
+  max-width: 960px;
   overflow: auto;
-}
-
-.pageHeading {
-  background: silver;
-  border-bottom: 3px solid grey;
-  line-height: 40px;
-}
-
-#sectionHeading {
-  text-align: left;
-  color: grey;
-  font-weight: bold;
-  padding-bottom: 10px;
-  padding-left: 0;
-  margin-left: 0;
-}
-  
-  .containerBody {
-    padding-top: 30px;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-/*
-  ========================================
-  footer
-  ========================================
-*/
-
-footer {
-  background: black;
-  color: grey;
-  border: 1px solid transparent;
+  padding: 20px 40px 10px 40px;
   z-index: 1;
-  box-shadow: 10px -8px 10px -6px black;
-  padding-top: 30px;
-  padding-bottom: 10px;
-  font-family: 'Raleway', sans-serif;
-  position: fixed;
-  bottom: 0;
-  width: 100%; 
 }
 
+.row {
+  padding: 0px 40px 40px 40px;
+}
+
+.lostGame, .wonGame {
+  height: auto; 
+  margin: 0 auto;
+  max-width: 300px;
+  position: relative; 
+ }
+
 /*
-  ========================================
-  Typography
-  ========================================
+========================================
+Typography
+========================================
 */
-h1 {
+
+h1 { /* PORTFOLIO SITE STYLES */
+  font-family: 'Raleway', sans-serif;  
   font-size: 2rem;
-  text-decoration: none;
-  text-align: left;
-  font-family: 'Raleway', sans-serif;  /* PORTFOLIO SITE FONT */
   font-weight: bold;
-  margin: 15px 20px 15px 20px; 
+  /* margin: 15px 20px 0px 20px;  */
+  text-align: left;
+  text-decoration: none;
+}
+
+p {  /* PORTFOLIO SITE STYLES */
+  color: #777777;
+  font-family: 'Raleway', sans-serif;  
 }
 
 h2 {
-  font-size: 2rem;
-  text-decoration: none;
   color: grey;
-  line-height: 1.5; 
-  border-bottom: 1px solid grey;
   font-family: 'Fondamento', cursive;  /* decorative font */
+  font-size: 2rem;
+  line-height: 1.5; 
+  text-decoration: none;
 }
 
-p {
-  font-family: 'Raleway', sans-serif;  /* PORTFOLIO SITE FONT */
-  color: #777777;
-}
 .containerIntro h1 {
+  color: silver; 
   display: table;
   margin: 0 auto;
-  color: silver; 
 }
 
 .containerIntro p {
-  font-family: 'Karla', sans-serif;
   color: grey;
+  font-family: 'Karla', sans-serif;
   font-size: 18px;
   line-height: 1.5; 
 }
 
 .wins_losses p {
+  color: #1d9ef3;
   font-family: 'Karla', sans-serif;  /* standard font */
   font-size: 24px; 
-  color: #1d9ef3;
-  padding-right: 0;
+  text-align: right;
 }
 
 #goodLuck {
@@ -191,14 +163,10 @@ p {
 }
 
 #number-to-guess, #userTotal p {
+  color: #eee8ac;
   font-family: 'Karla', sans-serif;  /* standard font */
   font-size: 24px; 
   line-height: 1.5; 
-  color: #eee8ac;
-}
-
-#playButton {
-  padding: 10px;
 }
 
 #instructions h1, #activeGame h1 {
@@ -207,14 +175,21 @@ p {
 }
 
 #instructions2 {
-  font-family: 'Karla', sans-serif;     /* standard font */
-  display: table;
-  margin: 0 auto;
-  padding-top: 20px; 
   color: silver; 
+  display: table;
+  font-family: 'Karla', sans-serif;     /* standard font */
   font-size: 20px; 
   line-height: 1.5; 
+  margin: 0 auto;
+  padding-top: 20px;  
 }
+
+/*
+========================================
+Instructions on hover 
+========================================
+ */
+
 #a:hover {
   text-decoration: underline;
   text-decoration-color: red; 
@@ -236,70 +211,72 @@ p {
   text-decoration-color: #876fe3; 
 }
 
-/*
+#f:hover {
+  text-decoration: underline;
+  text-decoration-color: fuchsia; 
+}
+
+  /*
 ========================================
-Media Screens
+Media 
 ========================================
  */
-  /* @media only screen and (max-width: 740px) {
-    .containerBody p {
-      font-size: 1rem;
-    }
-  } */
 
-  .row {
-    padding: 0px 40px 40px 40px;
-  
-  }
+#myVideo {
+  flex-grow: 1;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
 
-  /* #crystal_1 {
-    width: 95%;
-    height: auto;
-  } */
+/*
+========================================
+Modal 
+========================================
+*/
 
-  #myVideo {
-    position: fixed;
-    z-index: -1;
-    right: 0;
-    top: 0;
-    flex-grow: 1;
-  }
+.modalCustom {
+  color: silver; 
+  background: black; 
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
-  .lostGame, .wonGame {
-   max-width: 300px;
-   position: relative; 
-   margin: 0 auto;
-   height: auto; 
-  }
+ /*
+========================================
+Buttons
+========================================
+*/
 
-  .modalCustom {
-    background: black; 
-    color: silver; 
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border: none;
-  }
-
- #restart, #playButton {
-   color: white;
-   background: black;
-   font-family:'Raleway', sans-serif;
-   display: table;
-    margin: 0 auto;
+#restart, #playButton {
+  color: white;
+  background: black;
+  display: table;
+  font-family: 'Karla', sans-serif;
+  letter-spacing: 2px;
+  margin: 0 auto;
+  padding: 10px;
  }
 
  #restart:hover, #playButton:hover {
   color: black;
   background: white;
-  font-family:'Raleway', sans-serif;
   font-weight: bold; 
 }
+
+/*
+========================================
+Crystals 
+========================================
+*/
 
 #crystal_1:hover, #crystal_2:hover, #crystal_3:hover, #crystal_4:hover {
   animation: shake 0.5s;
   animation-iteration-count: infinite;
 }
 
-@keyframes shake {
+@keyframes shake {    /* Crystal animation */
   0% { transform: translate(1px, 1px) rotate(0deg); }
   10% { transform: translate(-1px, -2px) rotate(-1deg); }
   20% { transform: translate(-3px, 0px) rotate(1deg); }
@@ -311,4 +288,24 @@ Media Screens
   80% { transform: translate(-1px, -1px) rotate(1deg); }
   90% { transform: translate(1px, 2px) rotate(0deg); }
   100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+/*
+========================================
+footer
+========================================
+*/
+
+footer {
+  background: black;
+  border: 1px solid transparent;
+  bottom: 0;
+  box-shadow: 10px -8px 10px -6px black;
+  color: grey;
+  font-family: 'Raleway', sans-serif;
+  padding-bottom: 10px;
+  padding-top: 30px;
+  position: fixed;
+  width: 100%; 
+  z-index: 1;
 }

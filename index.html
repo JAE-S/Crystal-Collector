@@ -36,54 +36,55 @@
         <!-- Trigger Modal -->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header  modalCustom">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body modalCustom">
-                    <div class="container-fluid">
-                        <div class="row d-flex text-center">
-                            <video autoplay muted loop class="wonGame">
-                                <source src="assets/images/crystals_winner_gif_3.mp4" type="video/mp4" alt="YOU WON!">
-                            </video>
-                            <img class="lostGame" src="assets/images/game_over.png" alt="GAME OVER!">
-                        </div>
+                <div class="modal-content">
+                    <div class="modal-header  modalCustom">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body modalCustom">
+                        <div class="container-fluid">
+                            <div class="row d-flex text-center">
+                                <video autoplay muted loop class="wonGame">
+                                    <source src="assets/images/crystals_winner_gif_3.mp4" type="video/mp4" alt="YOU WON!">
+                                </video>
+                                <img class="lostGame" src="assets/images/game_over.png" alt="GAME OVER!">
+                            </div>
                             <div class="row d-flex">
-                               <button type="button" id="restart" class="btn text-center" data-dismiss="modal">Play Again!</button>
+                               <button type="button" id="restart" class="btn btn-block text-center" data-dismiss="modal">PLAY AGAIN!</button>
                             </div>
                         </div>
                     </div>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
 
         <!-- Middle Section -->
         <main class="background"> 
 
-            <!-- Intro Page -->
+            <!-- Instructions Section -->
             <section id="instructions">
+
                 <!-- Background Video -->
                 <video autoplay muted loop id="myVideo">
                     <source src="assets/images/background/crystals.mp4" type="video/mp4"  alt="Your browser does not support HTML5 video." preload>
                 </video>
 
+                <!-- Instructions -->
                 <div class="containerIntro">
                     <div class="row"> 
                         <h1>CRYSTAL COLLECTOR</h1>
                     </div>
-                    <div class="row text-center">
-                        <h2>How To Play The Game:</h2>
+                    <div class="row my-0 mr-md-auto">
+                        <h2 style="border-bottom: 1px solid grey">How To Play The Game:</h2>
                     </div>
-                    <div class="row text-left"> 
-                        <p id="a">When the game begins, you will be given a magic number.</p>
+                    <div class="row my-0 mr-md-auto"> 
+                        <p id="a">When the game begins you will be given a magic number.</p>
                         <p id="b">You will also recieve four crystals, each with its own hidden value. </p>
-                        <p id="c">Try to match the magic number by clicking the crystals. This will add the crystal's value to your total.</p> 
-                        <p id="d">If your total is the same as the magic number you will win that round.</p>
-                        <p id="e">If your total is not the same as the magic number you will lose that round.</p>
+                        <p id="c">Try to match the magic number by clicking the crystals.</p> 
+                        <p id="d">This will add the crystal's value to your total.</p> 
+                        <p id="e">If your total is the same as the magic number you will win that round.</p>
+                        <p id="f">If your total is not the same as the magic number you will lose that round.</p>
                     </div>
                     <div class="row" id="goodLuck"> 
                         <p>Press the button below to begin.</p>
@@ -92,7 +93,7 @@
 
                     <!-- Play Game -->
                     <div class="row">
-                        <button class="text-center btn-block" id="playButton">Play</button>
+                        <button class="text-center btn-block" id="playButton">PLAY!</button>
                     </div>
                 </div>
 
@@ -107,19 +108,22 @@
 
                 <div class="container2">
                      <!-- Title section -->
-                    <div class="row d-flex flex-md-row align-items-center" style="padding-top: 15px">
-                        <div class="col-lg-9 col-xs-9" style="max-width: 70%">
+                    <div class="row d-flex flex-column flex-md-row align-items-center" style="padding-top: 15px">
+                        <div class="my-0 mr-md-auto">
                             <h1 style="color: #1d9ef3">CRYSTAL COLLECTOR</h1>
                         </div>
 
                          <!-- Wins & Losses Counter -->
-                        <div class="col-lg-3 col-xs-3 text-right wins_losses" style="max-width: 30%">
+                        <div class="my-2 my-md-0 mr-md-0 wins_losses">
                             <p><span id="wins"></span></p>
                             <p><span id="losses"></span></p>
                         </div>
+                    </div>
+                     <!-- Instructions Reminder -->
+                    <div class="row text-center">
                         <span id="instructions2">Match the magic number by clicking the crystals to reveal their values!</span>
                     </div>
-                    
+                   
                     <!-- Crystals -->
                     <div class="row align-items-center crystalsRow">
                         <!-- 1st Crystal -->
@@ -148,7 +152,6 @@
                             <h2 class="text-center">Magic Number</h2>
                             <br>
                             <p><span id="number-to-guess"></span></p>
-                
                         </div>
                         <div class="col-lg-6 col-md-6 col-xs-6" style="max-width: 50%">
                             <!-- User's guesses -->
