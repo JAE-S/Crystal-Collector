@@ -87,16 +87,19 @@ START GAME - FROM INTRO PAGE
   Generates Random Number
   ========================================
   */
-  function generateRandom(){
-
-    gameOver = false;                                  
-    magicNumber = Math.floor(Math.random()* 120) + 19;   // Calculates random magicMumber 
-      $('#number-to-guess').text(magicNumber);           // Enters random magicMumber into HTML Doc
-      console.log(magicNumber);
-      $('#userTotal').html('<p>' + counter + '</p>');
-      
-    var randCrystalNumber = [];                         // Declares randomCrystalNumber Array 
-    var totalCrystals = 4;                              // Sets the total array length to 4
+ function getMagicNumber(min, max) {
+   
+    magicNumber = Math.floor(Math.random() * (120 - 19 + 1) ) + 19;   // Calculates random magicMumber
+    console.log(magicNumber);
+}                          
+function generateRandom(){
+     
+  getMagicNumber();
+  $('#number-to-guess').text(magicNumber);           // Enters random magicMumber into HTML Doc
+  $('#userTotal').html('<p>' + counter + '</p>');
+  gameOver = false;     
+  var randCrystalNumber = [];                         // Declares randomCrystalNumber Array 
+  var totalCrystals = 4;                              // Sets the total array length to 4
 
     for (var i = 0; i < totalCrystals; i++) {           // For loop - 4 iterations 
       do {                                              
@@ -107,50 +110,53 @@ START GAME - FROM INTRO PAGE
         console.log(randCrystalNumber)
     }
 
-    function existingNumber() {                              // If the current random number already exists in the tracker, return true
-      for (var i = 0; i < randCrystalNumber.length; i++) {
-        if (randCrystalNumber[i] === numberOptions) {
-          return true;
-        }
+  function existingNumber() {                              // If the current random number already exists in the tracker, return true
+    for (var i = 0; i < randCrystalNumber.length; i++) {
+      if (randCrystalNumber[i] === numberOptions) {
+        return true;
       }
+    }
         return false;
-    }
-    console.log(randCrystalNumber.length);
-    for (var i = 0; i < randCrystalNumber.length; i++) {                 // Each iteration will have its own unique value
-      $("#crystal_1").attr("data-crystalvalue", randCrystalNumber[0]);  
-      $("#crystal_2").attr("data-crystalvalue", randCrystalNumber[1]);
-      $("#crystal_3").attr("data-crystalvalue", randCrystalNumber[2]);
-      $("#crystal_4").attr("data-crystalvalue", randCrystalNumber[3]);
-    }
-    
-    $(".crystal").on("click", function() {
-    soundClick.play();
+  }
+  console.log(randCrystalNumber.length);
 
-    var crystalValue = ($(this).attr("data-crystalvalue"));           // Adds the crystalValue to the user's "counter"
-    crystalValue = parseInt(crystalValue);
-    counter += crystalValue;                                          // Every click, from every crystal adds to the global counter.
-    $('#userTotal').html('<p>' + counter + '</p>');
-    $('#instructions2').hide();
+  for (var i = 0; i < randCrystalNumber.length; i++) {                 // Each iteration will have its own unique value
+    $("#crystal_1").attr("data-crystalvalue", randCrystalNumber[0]);  
+    $("#crystal_2").attr("data-crystalvalue", randCrystalNumber[1]);
+    $("#crystal_3").attr("data-crystalvalue", randCrystalNumber[2]);
+    $("#crystal_4").attr("data-crystalvalue", randCrystalNumber[3]);
+  }
+    
+  $(".crystal").on("click", function() {
+  soundClick.play();
+
+  var crystalValue = ($(this).attr("data-crystalvalue"));           // Adds the crystalValue to the user's "counter"
+  crystalValue = parseInt(crystalValue);
+  counter += crystalValue;                                          // Every click, from every crystal adds to the global counter.
+  $('#userTotal').html('<p>' + counter + '</p>');
+  $('#instructions2').hide();
   
-    /*
-    ========================================
-    CHECK SCORES 
-    ========================================
-    */  
-    // records losses
-    if (counter === magicNumber) {           
-      wins++;                               // Increments wins 
-      soundWon.play();                          
-      $('#wins').text('WINS: ' + wins);
-      $('#restart').show();                 // Shows the restart button 
-      $('.crystal').off('click');           // Disables click function of crystals until New game is run 
-      gameOver = true;
-      $('#myModal').modal('show');          // Toggles modal 
-      $('.wonGame').show();
-      $('.lostGame').hide();
-      $('.container2').hide();
-    }
-    // records wins
+  /*
+  ========================================
+  CHECK SCORES 
+  ========================================
+  */  
+
+  // records losses
+  if (counter === magicNumber) {           
+    wins++;                               // Increments wins 
+    soundWon.play();                          
+    $('#wins').text('WINS: ' + wins);
+    $('#restart').show();                 // Shows the restart button 
+    $('.crystal').off('click');           // Disables click function of crystals until New game is run 
+    gameOver = true;
+    $('#myModal').modal('show');          // Toggles modal 
+    $('.wonGame').show();
+    $('.lostGame').hide();
+    $('.container2').hide();
+  }
+
+  // records wins
     else if (counter >= magicNumber) {
       losses++;                                // Increments losses
       soundLost.play();  
