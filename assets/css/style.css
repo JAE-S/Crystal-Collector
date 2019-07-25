@@ -75,18 +75,16 @@ body {
   opacity: .9;
   z-index: 2;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  padding: 40px 40px 40px 40px;
+  padding: 40px 40px 20px 40px;
   margin: 0 auto;
   overflow: auto;
   margin-bottom: 40px;
 }
 
-
 .container2 {
   max-width: 960px;
   z-index: 1;
   background: black;
-  background-repeat: repeat;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 20px 40px 10px 40px;
   margin: 0 auto;
@@ -144,7 +142,7 @@ h1 {
   font-size: 2rem;
   text-decoration: none;
   text-align: left;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', sans-serif;  /* PORTFOLIO SITE FONT */
   font-weight: bold;
   margin: 15px 20px 15px 20px; 
 }
@@ -154,31 +152,89 @@ h2 {
   text-decoration: none;
   color: grey;
   line-height: 1.5; 
-  font-family: 'Fondamento', cursive;
-  margin-right: 1.5rem;
+  border-bottom: 1px solid grey;
+  font-family: 'Fondamento', cursive;  /* decorative font */
 }
 
 p {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', sans-serif;  /* PORTFOLIO SITE FONT */
   color: #777777;
 }
 .containerIntro h1 {
   display: table;
   margin: 0 auto;
-  color: silver;
+  color: silver; 
+}
+
+.containerIntro p {
+  font-family: 'Karla', sans-serif;
+  color: grey;
+  font-size: 18px;
+  line-height: 1.5; 
+}
+
+.wins_losses p {
+  font-family: 'Karla', sans-serif;  /* standard font */
+  font-size: 24px; 
+  color: #1d9ef3;
+  padding-right: 0;
+  padding-bottom: 30px;
+}
+
+#goodLuck {
+  display: table;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#activeGame h2 {
+  color: #876fe3;
+}
+
+#number-to-guess, #userTotal p {
+  font-family: 'Karla', sans-serif;  /* standard font */
+  font-size: 24px; 
+  line-height: 1.5; 
+  color: #eee8ac;
+}
+
+#playButton {
+  padding: 10px;
 }
 
 #instructions h1, #activeGame h1 {
-  font-family: 'Fondamento', cursive;
+  font-family: 'Fondamento', cursive;   /* decorative font */
+  font-size: 24px; 
 }
 
 #instructions2 {
-  font-family: 'Fondamento', cursive;
+  font-family: 'Karla', sans-serif;     /* standard font */
   display: table;
   margin: 0 auto;
-  color: grey; 
-  font-size: 1rem;
+  padding-top: 20px; 
+  color: silver; 
+  font-size: 20px; 
   line-height: 1.5; 
+}
+#a:hover {
+  text-decoration: underline;
+  text-decoration-color: red; 
+}
+#b:hover {
+  text-decoration: underline;
+  text-decoration-color: yellow; 
+}
+#c:hover {
+  text-decoration: underline;
+  text-decoration-color:greenyellow; 
+}
+#d:hover {
+  text-decoration: underline;
+  text-decoration-color: #1d9ef3; 
+}
+#e:hover {
+  text-decoration: underline;
+  text-decoration-color: #876fe3; 
 }
 
 /*
@@ -193,7 +249,7 @@ Media Screens
   } */
 
   .row {
-    padding-bottom: 30px; 
+    padding: 0px 40px 40px 40px;
   
   }
 
@@ -210,16 +266,50 @@ Media Screens
     flex-grow: 1;
   }
 
-  #gameOverImage {
-
-    /* Positioning */
-     margin: 0 auto;
-
-    /* Box-model */
-   max-width: 100%;
+  .lostGame, .wonGame {
+   max-width: 300px;
+   position: relative; 
+   margin: 0 auto;
    height: auto; 
-
-    /* Typography */
-    text-align: center;
-
   }
+
+  .modalCustom {
+    background: black; 
+    color: silver; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: none;
+  }
+
+ #restart, #playButton {
+   color: white;
+   background: black;
+   font-family:'Raleway', sans-serif;
+   display: table;
+    margin: 0 auto;
+ }
+
+ #restart:hover, #playButton:hover {
+  color: black;
+  background: white;
+  font-family:'Raleway', sans-serif;
+  font-weight: bold; 
+}
+
+#crystal_1:hover, #crystal_2:hover, #crystal_3:hover, #crystal_4:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}

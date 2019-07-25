@@ -73,6 +73,7 @@ START GAME - FROM INTRO PAGE
     $('#wins').text('WINS: ' + wins);         // Adds 'Wins: ' to HTML Doc 
     $('#losses').text('LOSSES: ' + losses);   // Adds 'losses: ' to HTML Doc 
     $('#myModal').modal('hide');             // Toggles modal 
+    $('.container2').show();
   });
 
   /*
@@ -86,6 +87,7 @@ START GAME - FROM INTRO PAGE
     magicNumber = Math.floor(Math.random()* 120) + 19;   // Calculates random magicMumber 
       $('#number-to-guess').text(magicNumber);           // Enters random magicMumber into HTML Doc
       console.log(magicNumber);
+      $('#userTotal').html('<p>' + counter + '</p>');
       
     var randCrystalNumber = [];                         // Declares randomCrystalNumber Array 
     var totalCrystals = 4;                              // Sets the total array length to 4
@@ -136,8 +138,9 @@ START GAME - FROM INTRO PAGE
       $('.crystal').off('click');           // Disables click function of crystals until New game is run 
       gameOver = true;
       $('#myModal').modal('show');          // Toggles modal 
-      $('#wonGameImage').show();
-      $('#lostGameImage').hide();
+      $('.wonGame').show();
+      $('.lostGame').hide();
+      $('.container2').hide();
     }
     // records wins
     else if (counter >= magicNumber) {
@@ -147,8 +150,9 @@ START GAME - FROM INTRO PAGE
       $('.crystal').off('click');            // Disables click function of crystals until New game is run 
       gameOver = true;
       $('#myModal').modal('show');          // Toggles modal 
-      $('#lostGameImage').show();
-      $('#wonGameImage').hide();
+      $('.lostGame').show();
+      $('.wonGame').hide();
+      $('.container2').hide();
     }
   });
   }
