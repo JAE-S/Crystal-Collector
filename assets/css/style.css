@@ -29,6 +29,7 @@ header {
   color: silver;
   font-family:'Raleway', sans-serif;
   padding: 20px 40px 20px 40px;
+  position: sticky;
   z-index: 1;
 }
 
@@ -78,7 +79,8 @@ body {
   margin-bottom: 40px;
   max-width: 960px;
   opacity: .9;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
   padding: 40px 40px 20px 40px;
   z-index: 2;
 }
@@ -88,9 +90,10 @@ body {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin: 0 auto;
   max-width: 960px;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
   padding: 20px 40px 10px 40px;
-  z-index: 1;
+  z-index: 2;
 }
 
 .row {
@@ -158,7 +161,7 @@ h2 {
   text-align: center;
 }
 
-#activeGame h2 {
+#activeGame h1 {
   color: #876fe3;
 }
 
@@ -303,20 +306,21 @@ footer {
   box-shadow: 10px -8px 10px -6px black;
   color: grey;
   font-family: 'Raleway', sans-serif;
+  margin-top: 40px;
   padding-bottom: 10px;
   padding-top: 30px;
-  position: fixed;
+  position: sticky;
   width: 100%; 
   z-index: 1;
 }
 
 /*
 ========================================
-Media Screens
+Media Screens --> SMALL
 ========================================
 */
 
-@media screen and (min-width: 789px) {
+@media screen and (min-width: 768px) {
   .colXS {
     padding: 0 15px; 
   }
@@ -327,14 +331,13 @@ Media Screens
 
   .containerIntro {
     max-width: 960px;
-    overflow: auto;
     padding: 40px 40px 20px 40px;
   }
     
   .container2 {
     max-width: 960px;
-    overflow: auto;
     padding: 20px 40px 10px 40px;
+  
   }
         
   h1 { /* PORTFOLIO SITE STYLES */
@@ -350,7 +353,7 @@ Media Screens
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 1.5; 
   }
 
@@ -378,32 +381,30 @@ Media Screens
     line-height: 1.5; 
     padding-top: 20px;  
   }
+
 }
-@media screen and (max-width: 788px) {
+@media screen and (max-width: 767px) {
   
   .colXS {
     padding: 0px; 
   }
 
   .row {
-    padding: 0px 20px 20px 20px;
+    padding: 20px;
   }
 
   .containerIntro {
     max-width: 960px;
-    overflow: auto;
     padding: 20px 10px 20px 10px;
   }
     
   .container2 {
     line-height: 1.5;
     max-width: 960px;
-    overflow: auto;
     padding: 20px 10px 20px 10px;
   }
 
   h1 { /* PORTFOLIO SITE STYLES */
-    font-size: 3vw;
     font-weight: bold;
     text-align: left;
     text-decoration: none;
@@ -412,39 +413,95 @@ Media Screens
   p {  /* PORTFOLIO SITE STYLES */
     color: #777777;
     font-family: 'Raleway', sans-serif; 
-    font-size: 3vw;
   }
   
   h2 {
     display: table; 
+    font-size: 1.5rem; 
     margin: 0 auto; 
-    font-size: 4vw;
+  }
+  
+  .containerIntro p {
+    display: table; 
+    margin: 0 auto; 
+    text-align: center;
+    line-height: 2;
+    font-size: 17px;
+  }
+  
+  .wins_losses p {
+    line-height: 2;
+  }
+  
+  #instructions h1, #activeGame h1 {
+    text-align: center; 
+  }
+
+  .instructionsSmall {
+    display: none;
+  }
+  
+}
+
+/*
+========================================
+Media Screens --> XXS
+========================================
+*/
+
+@media screen and (min-width: 422px) {
+
+  h2 {
+    font-size: 4vw; 
+    line-height: 1.5; 
+  }
+
+  .containerIntro p {
     line-height: 1.5;
+    font-size: 17px;
+  }
+
+  .wins_losses p {
+    font-size: 18px; 
+  }
+
+  #number-to-guess, #userTotal p {
+    font-size: 24px; 
+  }
+
+  #instructions h1, #activeGame h1 {
+    font-size: 26px; 
+  }
+  
+  #score h1 {
+    font-size: 20px;
+  }
+
+}
+
+@media screen and (max-width: 421px) {
+   h2 {
+    font-size: 5vw;
   }
   
   .containerIntro p {
     font-size: 4vw;
-    line-height: 1.5; 
-    text-align: center; 
   }
   
   .wins_losses p {
-    font-size: 3vw;
-    line-height: 2;
-    text-align: right;
+    font-size: 5vw;
   }
   
   #number-to-guess, #userTotal p {
     font-size: 5vw; 
-    line-height: 1.5; 
   }
   
   #instructions h1, #activeGame h1 {
-    font-size: 6vw; 
-    text-align: center; 
+    font-size: 5vw; 
+  }
+
+  #score h1 {
+    font-size: 5vw;
   }
   
-  .instructionsSmall {
-    display: none;
-  }
 }
