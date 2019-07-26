@@ -76,7 +76,7 @@ body {
   background: black;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin: 0 auto;
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
   max-width: 960px;
   opacity: .9;
   overflow-y: auto;
@@ -306,7 +306,7 @@ footer {
   box-shadow: 10px -8px 10px -6px black;
   color: grey;
   font-family: 'Raleway', sans-serif;
-  margin-top: 40px;
+  /* margin-top: 20px; */
   padding-bottom: 10px;
   padding-top: 30px;
   position: sticky;
@@ -477,6 +477,32 @@ Media Screens --> XXS
     font-size: 20px;
   }
 
+  #a:hover {
+    text-decoration: underline;
+    text-decoration-color: red; 
+  }
+  #b:hover {
+    text-decoration: underline;
+    text-decoration-color: yellow; 
+  }
+  #c:hover {
+    text-decoration: underline;
+    text-decoration-color:greenyellow; 
+  }
+  #d:hover {
+    text-decoration: underline;
+    text-decoration-color: #1d9ef3; 
+  }
+  #e:hover {
+    text-decoration: underline;
+    text-decoration-color: #876fe3; 
+  }
+  
+  #f:hover {
+    text-decoration: underline;
+    text-decoration-color: fuchsia; 
+  }
+
 }
 
 @media screen and (max-width: 421px) {
@@ -501,7 +527,7 @@ Media Screens --> XXS
   }
 
   #score h1 {
-    font-size: 5vw;
+    font-size: 4.5vw;
   }
   
 }
