@@ -317,6 +317,13 @@ Media Screens
 */
 
 @media screen and (min-width: 789px) {
+  .colXS {
+    padding: 0 15px; 
+  }
+
+  .row {
+    padding: 0px 40px 40px 40px;
+  }
 
   .containerIntro {
     max-width: 960px;
@@ -363,7 +370,7 @@ Media Screens
   }
 
   #instructions h1, #activeGame h1 {
-    font-size: 24px; 
+    font-size: 26px; 
   }
 
   #instructions2 {
@@ -372,8 +379,15 @@ Media Screens
     padding-top: 20px;  
   }
 }
-
 @media screen and (max-width: 788px) {
+  
+  .colXS {
+    padding: 0px; 
+  }
+
+  .row {
+    padding: 0px 20px 20px 20px;
+  }
 
   .containerIntro {
     max-width: 960px;
@@ -398,17 +412,20 @@ Media Screens
   p {  /* PORTFOLIO SITE STYLES */
     color: #777777;
     font-family: 'Raleway', sans-serif; 
-    font-size: 2vw;
+    font-size: 3vw;
   }
   
   h2 {
+    display: table; 
+    margin: 0 auto; 
     font-size: 4vw;
-    line-height: 1.5; 
+    line-height: 1.5;
   }
   
   .containerIntro p {
-    font-size: 3vw;
+    font-size: 4vw;
     line-height: 1.5; 
+    text-align: center; 
   }
   
   .wins_losses p {
@@ -423,7 +440,8 @@ Media Screens
   }
   
   #instructions h1, #activeGame h1 {
-    font-size: 5vw; 
+    font-size: 6vw; 
+    text-align: center; 
   }
   
   .instructionsSmall {
