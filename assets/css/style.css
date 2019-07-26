@@ -76,7 +76,6 @@ body {
   background: black;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin: 0 auto;
-  /* margin-bottom: 40px; */
   max-width: 960px;
   opacity: .9;
   overflow-y: auto;
@@ -194,29 +193,35 @@ Instructions on hover
  */
 
 #a:hover {
+  color: silver; 
   text-decoration: underline;
   text-decoration-color: red; 
 }
 #b:hover {
+  color: silver; 
   text-decoration: underline;
   text-decoration-color: yellow; 
 }
 #c:hover {
+  color: silver; 
   text-decoration: underline;
   text-decoration-color:greenyellow; 
 }
 #d:hover {
+  color: silver; 
   text-decoration: underline;
   text-decoration-color: #1d9ef3; 
 }
 #e:hover {
+  color: silver; 
   text-decoration: underline;
   text-decoration-color: #876fe3; 
 }
 
 #f:hover {
+  color: silver; 
   text-decoration: underline;
-  text-decoration-color: fuchsia; 
+  text-decoration-color: palevioletred; 
 }
 
   /*
