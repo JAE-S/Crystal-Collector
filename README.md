@@ -23,7 +23,7 @@
 ---
 ## Technologies
 > <b>Design Tools:</b>
-  * <p>Adobe Illustrator:</b> Graphic assets 
+  * <b>Adobe Illustrator:</b> Graphic assets 
   * <b>Adobe Photoshop:</b> Graphic assets & gifs
   * <b>Adobe After Effects:</b> Background video 
   
@@ -36,17 +36,17 @@
 
 ## Instructions
 
-    * When the game begins you will be given a magic number between 19 - 120.
+    1. When the game begins you will be given a magic number between 19 - 120.
 
-    * You will also receive four crystals, each with its own hidden value.
+    2. You will also receive four crystals, each with its own hidden value.
 
-    * Try to match the magic number by clicking the crystals. This will reveal the crystal's value and add it to your total. 
+    3. Try to match the magic number by clicking the crystals. This will reveal the crystal's value and add it to your total. 
 
-    * If your total is the same as the magic number you will win that round.
+    4. If your total is the same as the magic number you will win that round.
 
-    * If your total is not the same as the magic number you will lose that round.
+    5. If your total is not the same as the magic number you will lose that round.
 
-    * After the game is over you will be given the option to play again. Each additional round will assign new values to the magic number and crystals.
+    6. After the game is over you will be given the option to play again. Each additional round will assign new values to the magic number and crystals.
 
 ---
 
