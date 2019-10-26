@@ -1,5 +1,5 @@
 
-<img src="assets/images/crystal_collector.svg" align="right"
+<img src="assets/images/crystal_collector.png" align="right"
      title="Crystal Collector" width="30%" height="auto">
 
 # Welcome to Crystal Collector
